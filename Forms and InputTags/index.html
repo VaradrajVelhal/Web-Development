@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>Application Form</h2>
+    <div>
+        <form action="post">
+        <label for="Username">Enter your username</label>
+        <input type="text" id="Username" name="username" placeholder="Enter your username">
+    </div>
+
+    <div>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+    </div>
+
+    <div>
+        <label for="comment">Enter your feedback here....</label>
+        <textarea name="comment" id="comment" cols="50" rows="4" >
+        </textarea>
+    </div>
+    <div>
+        <select name="fruits" id="fruits">
+            <option value="apple">Apple</option>
+            <option value="mango">Mango</option>
+            <option value="banana">Banana</option>
+            <option value="peer">Peer</option>
+        </select>
+    </div>
+
+    </form>
+</body>
+</html>
