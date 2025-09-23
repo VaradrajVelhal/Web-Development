@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Element Selector */
+        div{
+            background-color: rebeccapurple;
+        }
+        .red{
+            /* Class Selector */
+            background-color: chocolate;
+        }
+        #gray{
+            /* Id Selector */
+            background-color: gray;
+        }
+        div > p{
+            /* Child Selector */
+            color: blue;
+            background-color: maroon;
+        }
+        div p{
+            /* Discendant Selector */
+            background-color: cornflowerblue;
+            color: bisque;
+        }
+        *{
+            /* Universal Selector */
+            margin: 0;
+            padding: 0;
+        }
+        /* Pseudo Selector */
+        a:visited{
+            color: magenta;
+        }
+        a:active{
+            background-color: aqua;
+        }
+        a:hover{
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div>I am a Div</div>
+    <div class="red">
+        <p>I am a paragraph inside Div</p>
+        I am a Div number 2</div>
+    <div id="gray">
+        <article>
+            <p>I am paragraph inside article tag so i will need "Descendant Selector"</p>
+        </article> I am a Div number 3</div>
+        <a href="https://google.com">Visit Google</a>
+</body>
+</html>

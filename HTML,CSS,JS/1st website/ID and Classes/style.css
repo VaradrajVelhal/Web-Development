@@ -1,0 +1,9 @@
+.red{/* classes are accessed using ".", id's are accessed using "#"*/
+    color: red;
+}
+.anotherclass{
+    background-color: yellow;
+}
+#seconddiv{
+    background-color: khaki;
+}

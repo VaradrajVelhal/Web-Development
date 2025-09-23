@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+</head>
+<style>
+    /* .box:first-child{
+        background-color: red;
+    } */
+    .boxes::before{
+        content: "This will be displayed before boxes";
+        color: green;
+    }
+    /* This before and after are called Pseudo Elements */
+    .boxes::after{
+        content: "This will be displayed after boxes";
+        color: red;
+    }
+    ::selection{
+        color: rgb(255, 153, 0);
+        background-color: black;
+    }
+    .box::first-letter{
+        color: aqua;
+        font-size: 20px;
+    }
+    input::placeholder{
+        color: rgb(190, 122, 253);
+    }
+</style>
+<body>
+    <div class="boxes">
+        <div class="box">1st Box</div>
+        <div class="box">2nd Box</div>
+        <div class="box">3rd Box</div>
+        <input type="text" placeholder="Type Your Name Here">
+    </div>
+</body>
+</html>
