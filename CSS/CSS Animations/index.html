@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+</head>
+<style>
+.container{
+    background-color: aquamarine;
+    height: 80vh;
+    width: 30vw;
+}
+.box{
+    width: 50px;
+    height: 50px;
+    /* background-color: rgb(255, 45, 45); */
+    /* animation-name: variable;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1, 1.13, 0.3, 1.01);
+    animation-direction: alternate-reverse; there is shorthand ->*/
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: variable 2s cubic-bezier(1, 1.13, 0.3, 1.01) infinite alternate-reverse ;
+}
+@keyframes variable {
+    from{
+        background-color: lightgreen;
+    }
+    to{
+        transform: translateY(500px);
+        background-color: red;
+    }
+}
+</style>
+<body>
+    <div class="container">
+        <div class="box">box</div>
+    </div>
+</body>
+</html>
