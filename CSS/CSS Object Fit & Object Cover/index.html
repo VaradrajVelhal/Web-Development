@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Object Fit & Object Cover</title>
+</head>
+<style>
+    .container{
+        height: 634px;
+        width: 688px;
+        border: 2px solid red;
+        background-color: bisque;
+    }
+    img{
+        height: 634px;
+        width: 688px;
+        object-fit: cover;
+        /* object-fit: fill; */
+        /* object fit is used to cover height and width if we adjust manually the image will Strech 
+        (Maintains Aspect Ratio)*/
+    }
+</style>
+<body>
+    <div class="container">
+        <img src="image.jpg" alt="Not Found">
+    </div>
+</body>
+</html>
