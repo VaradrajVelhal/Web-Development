@@ -1,118 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Sizing Units</title>
     <style>
-        .box {
-            box-sizing: border-box;
-            border: 2px solid black;
-            width: 80vw;
-            height: 80vh;
-            margin: 23px auto;
-            background-color: aqua;
-        }
+      /* 
+           .box - Example using viewport units (vw, vh)
+           - vw = viewport width → 1vw = 1% of the width of the browser window
+           - vh = viewport height → 1vh = 1% of the height of the browser window
+           These units make the element responsive to screen size.
+        */
+      .box {
+        /* Makes padding and border included inside width/height */
+        box-sizing: border-box;
 
-        .container {
-            box-sizing: border-box;
-            border: 2px solid black;
-            width: 80vw;
-            margin: 23px auto;
-            min-height: 80vh;
-            background-color: aqua;
+        border: 2px solid black;
+        width: 80vw; /* Takes 80% of the screen width */
+        height: 80vh; /* Takes 80% of the screen height */
+        margin: 23px auto; /* Centers the box horizontally */
+        background-color: aqua;
+      }
 
-        }
+      /* 
+           .container - Demonstrates use of 'min-height'
+           - min-height ensures that the element is at least 80vh tall
+             (but can grow if content is larger)
+           - This is useful for text-heavy content sections.
+        */
+      .container {
+        box-sizing: border-box;
+        border: 2px solid black;
+        width: 80vw; /* Same responsive width as above */
+        margin: 23px auto;
+        min-height: 80vh; /* Minimum height; expands automatically if content overflows */
+        background-color: aqua;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <div class="box">
-        This is a Box.
-    </div>
+  <body>
+    <!-- Box sized according to viewport height & width -->
+    <div class="box">This is a Box.</div>
+
+    <!-- Container with min-height for handling long content -->
     <div class="container">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi nihil maiores suscipit consequuntur
-        voluptatum rem aliquam ipsa doloribus architecto magnam, doloremque aspernatur quo, sed corporis saepe repellat
-        rerum sit? Et aut fugit ipsa nostrum fuga, nobis voluptatibus tenetur cum beatae optio mollitia porro molestiae
-        cupiditate voluptatum veritatis eum facilis deleniti, illo necessitatibus? Ipsa ex iure quidem.
-        <p>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum necessitatibus iusto unde dolor vero, quos
-            sit cupiditate culpa incidunt atque in odio neque perspiciatis minus nisi explicabo rem consequuntur
-            corporis deleniti illum sequi molestias deserunt accusamus dolorem? Neque ipsam qui consectetur voluptatem
-            ullam? Harum facilis vel mollitia aliquid? Soluta veritatis maxime architecto ab fugiat dignissimos, harum
-            consequatur! Officia qui aperiam optio obcaecati maiores cupiditate enim, eveniet reprehenderit nobis
-            officiis. Eum repellendus ipsa, hic magni sapiente deserunt itaque deleniti debitis, in sequi blanditiis
-            nobis vel corporis quos sint minima consectetur consequatur ipsum dignissimos amet dolore doloribus omnis.
-            Facilis sapiente dicta quia sed! Consequatur mollitia esse, incidunt consequuntur, suscipit ratione sequi
-            saepe quo blanditiis neque ea, dolore libero aut similique ad quam rem ex asperiores. Voluptatum soluta
-            culpa magnam perferendis porro, sit enim excepturi cupiditate! Quod amet, in laboriosam animi nam est ab
-            aspernatur quidem autem libero atque ex impedit esse fugit tempora cum quo, accusantium, incidunt magni
-            magnam quaerat ad voluptate inventore. Omnis asperiores, animi voluptate mollitia accusantium illo fugiat,
-            voluptates neque dolor quas quo architecto adipisci? Nam quia accusantium debitis, iure exercitationem sit
-            sequi vel adipisci aliquid, cum similique quae facilis dicta, excepturi blanditiis unde! Blanditiis mollitia
-            et corrupti molestias corporis quo, dolor aliquid, sit ipsam rerum accusamus sequi odit eum ex aliquam
-            necessitatibus. Molestias libero eaque neque sed officia voluptatem repudiandae aliquid? Modi amet, unde
-            veniam reprehenderit ipsum earum porro voluptas. Facere velit, laboriosam temporibus quas aliquid illum
-            ipsam minus veritatis a eum voluptatum ipsa cumque harum nobis voluptate recusandae beatae nam. Dolorem
-            fugit ratione explicabo distinctio at neque, tempore officiis laboriosam omnis ullam fuga ipsum esse?
-            Laborum, aut fuga iusto rem molestiae, deleniti nihil quasi cupiditate quibusdam eligendi nobis sit quae
-            debitis voluptate in quaerat libero distinctio? Incidunt, laboriosam rem exercitationem iusto animi fugit
-            quae reprehenderit, eaque voluptatibus atque architecto excepturi natus dicta ut optio non inventore itaque
-            qui accusantium facere quis? Porro quod provident placeat, minima eaque qui dolorum quo pariatur
-            necessitatibus similique voluptate culpa alias. Reiciendis perspiciatis labore quia dolor inventore,
-            consectetur sapiente unde, dolorem assumenda, beatae non obcaecati. Ipsam natus incidunt, sunt nihil
-            repellendus possimus id impedit culpa alias, quos accusamus distinctio iusto at vero unde aut commodi
-            assumenda vel omnis quo, mollitia itaque non quibusdam! Esse provident praesentium numquam architecto
-            molestias quod temporibus neque aliquid eaque cupiditate repudiandae porro modi, vitae culpa alias quasi
-            pariatur, cum adipisci maiores. Iusto perspiciatis quae enim odio ipsa, voluptatem minima veritatis, dolores
-            dolor itaque similique repellat atque corrupti, esse molestiae nobis incidunt vitae tenetur fugiat autem
-            dolorem voluptatum! Fuga ipsa necessitatibus labore, iure perspiciatis commodi ullam tempora beatae saepe
-            officia dicta blanditiis, natus laudantium mollitia et quia. Aperiam sed vitae sunt possimus optio iste
-            accusamus tempore voluptates eum ea. Saepe culpa in, enim distinctio esse eveniet nostrum possimus aliquid
-            molestias voluptatibus labore ipsum voluptates obcaecati maxime asperiores ut, minima, repudiandae suscipit
-            delectus sint voluptatum! Harum repudiandae aliquam odio, expedita placeat laudantium perferendis maxime
-            mollitia qui officiis consequuntur! Sapiente, consequuntur cupiditate iure maxime accusamus veritatis, sunt
-            tempore natus aliquam beatae molestiae consectetur quisquam veniam corporis at voluptate harum. Aliquam
-            nulla optio earum sapiente dolor repellat repellendus voluptas? Corrupti, quam voluptas soluta maxime
-            consequatur obcaecati! Minima, laborum neque quas, quae odio quos perferendis hic tempore omnis reiciendis
-            similique modi. Maiores reiciendis modi cumque, pariatur quae quam ea voluptas temporibus laborum minima
-            molestiae rem magni provident, ad possimus vitae blanditiis repellendus dicta quod id quisquam totam quo?
-            Nulla error autem beatae. Quis, iste! Id odio sunt quasi voluptatum esse possimus dolorum cupiditate unde
-            sint laboriosam voluptatibus dicta quibusdam ab minima corrupti eligendi beatae, earum laborum! In quos
-            explicabo expedita facere quidem magni id saepe nobis nisi aut, amet omnis accusamus quis, fugit dolore
-            totam, rerum distinctio unde doloremque. Necessitatibus in, iusto quia assumenda eius minima praesentium,
-            earum alias soluta repellendus, qui eveniet ducimus totam id sed optio sunt? Quasi provident enim corrupti
-            voluptatem voluptatibus facilis hic non dolore. Quia, similique. Beatae, atque voluptatem doloremque
-            perspiciatis et autem voluptatibus perferendis neque, aliquid quidem rerum pariatur. Consectetur iure
-            impedit beatae officiis saepe? Veritatis earum consequuntur cumque, sunt beatae tempore? Ratione
-            perspiciatis incidunt aliquid? Consequuntur illum nemo architecto laboriosam molestias cumque quisquam
-            impedit officiis placeat aliquid minus repellat alias nobis voluptates quo, dolorum fugiat aut saepe natus
-            nam ad animi! Deserunt consectetur ad reprehenderit dolore repellendus. Neque omnis voluptate vel distinctio
-            ipsa similique reiciendis nisi laborum quaerat alias? Sapiente eligendi cum possimus pariatur! Temporibus
-            dolore natus eaque dicta dolorem cupiditate nesciunt modi reiciendis beatae totam. Itaque eius unde adipisci
-            sit voluptatibus quaerat optio modi, veritatis est quas? Quaerat molestias inventore maxime magni quis
-            voluptatem est soluta! Numquam, debitis minus. Quos maiores dolorem possimus nisi impedit eos nemo ducimus,
-            autem obcaecati magni illo animi, dolor perspiciatis porro fugiat perferendis. Error, aliquam eveniet. Id
-            ipsum distinctio molestias minus excepturi facere temporibus nam eligendi illo non, et atque corporis iusto.
-            Sapiente recusandae porro sit aliquam nostrum temporibus optio explicabo molestiae nulla numquam libero
-            accusamus voluptatum quae ducimus deleniti nam doloremque, perspiciatis omnis magni fugit, quod deserunt
-            veritatis blanditiis. Fugiat aut quam at blanditiis, saepe dolorum dolores rem ullam tenetur tempora
-            aspernatur iure magnam sapiente similique autem commodi veniam aliquid doloremque quasi? Eius assumenda
-            maxime mollitia. Quis fugiat beatae reprehenderit ut voluptatum quaerat nostrum nobis facere velit
-            consequatur non qui hic, aliquid debitis repellendus explicabo sunt ratione accusamus est voluptatem aut
-            veritatis. Voluptatem minima molestiae reprehenderit vero eos, rem tempora dicta impedit minus veritatis
-            aspernatur architecto error officia sint voluptatibus ipsam natus dolorem harum consectetur temporibus id
-            cum iusto similique! Beatae, error fugiat in odio non iure temporibus esse placeat rem et est, saepe fugit
-            dignissimos maiores vel illo! Eligendi accusamus perferendis vero, corrupti, adipisci ea mollitia nulla
-            doloremque voluptatibus, tempore sint. Voluptatibus iure rerum autem adipisci eveniet debitis, officiis
-            possimus nam, eius quia ratione deserunt ad, velit modi illum delectus magnam suscipit sequi incidunt. Animi
-            ea accusantium vel doloribus temporibus repellendus reprehenderit eligendi, ullam eaque obcaecati unde
-            dolore quae quaerat fugiat earum aspernatur placeat ipsum quod repudiandae reiciendis quas provident
-            ratione! Veniam, exercitationem labore! Suscipit, sed.
-        </p>
+      <!-- Long text to show how min-height works when content grows -->
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi nihil
+      maiores suscipit consequuntur voluptatum rem aliquam ipsa doloribus
+      architecto magnam, doloremque aspernatur quo, sed corporis saepe repellat
+      rerum sit? Et aut fugit ipsa nostrum fuga, nobis voluptatibus tenetur cum
+      beatae optio mollitia porro molestiae cupiditate voluptatum veritatis eum
+      facilis deleniti, illo necessitatibus? Ipsa ex iure quidem.
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+        necessitatibus iusto unde dolor vero, quos sit cupiditate culpa incidunt
+        atque in odio neque perspiciatis minus nisi explicabo rem consequuntur
+        corporis deleniti illum sequi molestias deserunt accusamus dolorem?
+        (etc...)
+      </p>
     </div>
-</body>
-
+  </body>
 </html>

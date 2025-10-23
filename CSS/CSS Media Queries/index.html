@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Media Queries</title>
+
     <style>
+      /* 
+           Default styles apply to all screen sizes 
+           unless overridden by a media query.
+        */
+      body {
+        background-color: red; /* Default background for large screens */
+      }
+
+      /* 
+           Media Query:
+           This block runs only when the screen width is 455px or smaller.
+           (Used mostly for mobile or very small devices)
+        */
+      @media only screen and (max-width: 455px) {
         body {
-            background-color: red;
+          background-color: aqua; /* Change background color on small screens */
         }
 
-        @media only screen and (max-width: 455px) {
-            body {
-                background-color: aqua;
-            }
-            .boxes {
-                flex-direction: column;
-            }
-        }
-        
-        .box {
-            height: 344px;
-            width: 344px;
-            background-color: azure;
-            padding: 3px;
-            margin: 3px;
-        }
-
+        /* 
+               Changes the layout direction of flex container to column 
+               so boxes stack vertically on small screens.
+            */
         .boxes {
-            display: flex;
+          flex-direction: column;
         }
+      }
+
+      /* 
+           Each box has a fixed size and spacing.
+           These remain same on larger screens unless modified in media query.
+        */
+      .box {
+        height: 344px;
+        width: 344px;
+        background-color: azure;
+        padding: 3px;
+        margin: 3px;
+      }
+
+      /* 
+           .boxes is a flex container.
+           By default, boxes are aligned horizontally (row direction).
+        */
+      .boxes {
+        display: flex;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- 
+         .boxes container holds 3 child .box elements.
+         On large screens → boxes are side-by-side (row layout).
+         On small screens (<455px) → boxes stack vertically.
+    -->
     <div class="boxes">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
     </div>
-</body>
+  </body>
 </html>

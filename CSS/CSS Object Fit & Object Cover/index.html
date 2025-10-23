@@ -1,29 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Object Fit & Object Cover</title>
-</head>
-<style>
-    .container{
-        height: 634px;
-        width: 688px;
-        border: 2px solid red;
-        background-color: bisque;
+  </head>
+
+  <style>
+    /* 
+       .container acts as a fixed-size box that holds the image.
+       The image will adjust to fit inside this area based on object-fit.
+    */
+    .container {
+      height: 634px;
+      width: 688px;
+      border: 2px solid red;
+      background-color: bisque;
     }
-    img{
-        height: 634px;
-        width: 688px;
-        object-fit: cover;
-        /* object-fit: fill; */
-        /* object fit is used to cover height and width if we adjust manually the image will Strech 
-        (Maintains Aspect Ratio)*/
+
+    /* 
+       By default, <img> tries to maintain its natural size.
+       Using object-fit helps control how it behaves inside the container.
+    */
+    img {
+      height: 634px;
+      width: 688px;
+
+      /* 
+           object-fit: cover → fills the container completely 
+           while maintaining the image's aspect ratio.
+           (Parts of the image may be cropped)
+        */
+      object-fit: cover;
+
+      /* 
+           Alternative values:
+           - object-fit: fill; → Stretches image to fill container (distorts image)
+           - object-fit: contain; → Fits entire image without cropping (leaves empty space)
+           - object-fit: none; → Keeps original image size (may overflow)
+           - object-fit: scale-down; → Chooses smaller of 'none' or 'contain'
+        */
+
+      /* 
+           Note: object-fit is mainly used when height and width of the image 
+           are explicitly defined (as we did above).
+        */
     }
-</style>
-<body>
+  </style>
+
+  <body>
+    <!-- 
+         The image is placed inside .container.
+         Since object-fit: cover is used, it will completely fill 
+         the red-bordered area without stretching (aspect ratio preserved).
+    -->
     <div class="container">
-        <img src="image.jpg" alt="Not Found">
+      <img src="image.jpg" alt="Not Found" />
     </div>
-</body>
+  </body>
 </html>

@@ -1,41 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Animation</title>
-</head>
-<style>
-.container{
-    background-color: aquamarine;
-    height: 80vh;
-    width: 30vw;
-}
-.box{
-    width: 50px;
-    height: 50px;
-    /* background-color: rgb(255, 45, 45); */
-    /* animation-name: variable;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(1, 1.13, 0.3, 1.01);
-    animation-direction: alternate-reverse; there is shorthand ->*/
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    animation: variable 2s cubic-bezier(1, 1.13, 0.3, 1.01) infinite alternate-reverse ;
-}
-@keyframes variable {
-    from{
-        background-color: lightgreen;
+  </head>
+
+  <style>
+    /* 
+   The container div holds the animated box.
+   Using viewport units (vh, vw) makes it responsive.
+   vh = % of viewport height, vw = % of viewport width.
+*/
+    .container {
+      background-color: aquamarine;
+      height: 80vh; /* 80% of viewport height */
+      width: 30vw; /* 30% of viewport width */
     }
-    to{
-        transform: translateY(500px);
-        background-color: red;
+
+    /* 
+   The box will be animated using the @keyframes rule.
+   Uncomment background-color if you want an initial color.
+*/
+    .box {
+      width: 50px;
+      height: 50px;
+      /* background-color: rgb(255, 45, 45); */
+
+      /* 
+       Longhand animation properties (commented out for reference):
+       animation-name: variable;
+       animation-duration: 2s;
+       animation-iteration-count: infinite;
+       animation-timing-function: cubic-bezier(1, 1.13, 0.3, 1.01);
+       animation-direction: alternate-reverse;
+
+       You used the shorthand form below, which is more concise.
+    */
+
+      /* 
+       Shorthand syntax:
+       animation: name duration timing-function delay iteration-count direction fill-mode;
+       
+       Your shorthand breakdown:
+       - name: variable (refers to the keyframes below)
+       - duration: 2s (animation lasts 2 seconds)
+       - timing-function: cubic-bezier(1, 1.13, 0.3, 1.01) (custom easing)
+       - iteration-count: infinite (keeps repeating forever)
+       - direction: alternate-reverse (reverses direction each cycle)
+    */
+      animation: variable 2s cubic-bezier(1, 1.13, 0.3, 1.01) infinite
+        alternate-reverse;
     }
-}
-</style>
-<body>
+
+    /* 
+   The @keyframes rule defines the animation steps.
+   It controls how the box’s properties change over time.
+*/
+    @keyframes variable {
+      from {
+        background-color: lightgreen; /* starting color */
+      }
+      to {
+        transform: translateY(500px); /* moves box 500px down */
+        background-color: red; /* ending color */
+      }
+    }
+  </style>
+
+  <body>
+    <!-- 
+        Container holds the box that will animate vertically.
+        "box" div will move up and down and change color infinitely.
+    -->
     <div class="container">
-        <div class="box">box</div>
+      <div class="box">box</div>
     </div>
-</body>
+  </body>
 </html>

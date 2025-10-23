@@ -7,12 +7,36 @@
     <title>Color</title>
     <style>
         h1 {
+            /* ============================
+               Different Ways to Set Colors
+               ============================ */
+
+            /* 1️⃣ Named color keyword */
             /* color: orangered; */
+
+            /* 2️⃣ Hex color code (6-digit or 3-digit)
+               - Uses #RRGGBB or #RGB format
+               - Example: #0BE → same as #00BBEE */
             /* color: #0BE; */
+
+            /* 3️⃣ RGB format
+               - rgb(red, green, blue)
+               - Each value ranges from 0–255 */
             /* color: rgb(176, 78, 129); */
+
+            /* 4️⃣ RGBA format (A = Alpha/opacity)
+               - Fourth value (0 to 1) controls transparency */
             /* color: rgba(255, 200, 60, 0.584); */
+
+            /* 5️⃣ HSL format (Hue, Saturation, Lightness)
+               - Hue: angle on color wheel (0–360)
+               - Saturation: color intensity (%)
+               - Lightness: brightness (%) */
             color: hsl(292, 100%, 50%);
-            /* same for background-color: ; */
+
+            /* You can use all these formats for 
+               both text color and background-color */
+            /* Example: background-color: rgb(220, 50, 50); */
         }
     </style>
 </head>
@@ -20,13 +44,13 @@
 <body>
     <h1>This is all about colors</h1>
     <p>
-        Colors can be Repressented in
+        Colors can be represented in:
         <ol>
-            <li>Color keywords</li>
-            <li>Hex Color Code</li>
-            <li>RGB</li>
-            <li>RGBA</li>
-            <li>HSL</li>
+            <li>Color keywords (e.g., red, blue, green)</li>
+            <li>Hex color codes (#RRGGBB)</li>
+            <li>RGB values (rgb())</li>
+            <li>RGBA values (rgb() + opacity)</li>
+            <li>HSL values (hue, saturation, lightness)</li>
         </ol>
     </p>
 </body>

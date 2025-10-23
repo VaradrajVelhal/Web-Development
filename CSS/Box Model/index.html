@@ -1,36 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Box Model</title>
+
     <style>
-        .box1{
-            margin: 25px;
-            padding: 10px;
-            border: 2px solid maroon;
-            background-color: aqua;
-            color: red;
-            height: 100px;
-            box-sizing: border-box;
-        }
-        .box2{
-            margin: 25px;
-            padding: 10px;
-            border: 2px solid black;
-            background-color: aqua;
-            color: brown;
-            height: 100px;
-            box-sizing: border-box;
-        }
-        *{
-            padding: 0;
-            margin: 0;
-        }
+      /* 
+           The universal selector (*) is used to remove default
+           browser margin and padding from all elements.
+           This helps keep layout consistent across browsers.
+        */
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      /* 
+           .box1 - Demonstrates box model properties
+           Each box has margin (outside space), padding (inside space),
+           border, background color, text color, and height.
+        */
+      .box1 {
+        margin: 25px; /* Space outside the box */
+        padding: 10px; /* Space inside the box (between content and border) */
+        border: 2px solid maroon; /* Border around the box */
+        background-color: aqua; /* Background color of the box */
+        color: red; /* Text color */
+        height: 100px; /* Total height of the box */
+        box-sizing: border-box; /* Includes border & padding inside total height/width */
+      }
+
+      /* 
+           .box2 - Same structure as .box1 but different color and border
+           Helps visualize vertical spacing between boxes (margin effect)
+        */
+      .box2 {
+        margin: 25px;
+        padding: 10px;
+        border: 2px solid black;
+        background-color: aqua;
+        color: brown;
+        height: 100px;
+        box-sizing: border-box;
+      }
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
+    <!-- 
+         Each div represents a box. 
+         Both use the box model (margin, border, padding, content).
+    -->
     <div class="box box1">I am a div</div>
     <div class="box box2">I am another div</div>
-</body>
+  </body>
 </html>

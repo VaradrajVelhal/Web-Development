@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    .img1{
-        height: 600px;
-        /* filter: blur(5px) */
-        /* filter: brightness(200%); */
-        /* filter: invert(1); */
-        filter: opacity(0.6
-        
-        );
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Filter Property</title>
+  </head>
+
+  <style>
+    /* 
+       .img1 demonstrates different filter effects.
+       Only one filter should be active at a time for testing.
+       Uncomment the one you want to apply.
+    */
+    .img1 {
+      height: 600px;
+
+      /* 
+         Common CSS filters to experiment with:
+         
+         blur(5px)       → adds a blur effect.
+         brightness(200%) → increases brightness (100% is normal).
+         invert(1)        → inverts image colors (1 = fully inverted).
+         opacity(0.6)     → sets transparency (1 = fully visible, 0 = invisible).
+      */
+
+      /* filter: blur(5px); */
+      /* filter: brightness(200%); */
+      /* filter: invert(1); */
+      filter: opacity(0.6); /* currently active filter */
     }
-    .img2{
-        height: 600px;
+
+    /* 
+       .img2 is the same image without filters,
+       used for comparison to see the visual difference.
+    */
+    .img2 {
+      height: 600px;
     }
-</style> 
-<body>
+  </style>
+
+  <body>
+    <!-- 
+         Container holds two images side by side.
+         The first image (.img1) has a filter effect.
+         The second (.img2) shows the original image for comparison.
+    -->
     <div class="container">
-        <img class="img1" src="image.jpg" alt="Not Found">
-        <img class="img2" src="image.jpg" alt="Not Found">
+      <img class="img1" src="image.jpg" alt="Not Found" />
+      <img class="img2" src="image.jpg" alt="Not Found" />
     </div>
-</body>
+  </body>
 </html>

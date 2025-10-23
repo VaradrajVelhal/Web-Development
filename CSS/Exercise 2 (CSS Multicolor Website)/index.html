@@ -1,53 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multicolor website</title>
-</head>
-<style>
+  </head>
+  <style>
+    /* ===============================
+       CSS Variables (Theme Settings)
+       Uncomment one block to switch themes easily
+    =============================== */
+
+    /* Red Theme */
     /* :root{
         --primary-color: rgb(241, 93, 93);
         --text-color: white;
         --second-color: rgb(249, 191, 191);
     } */
-    :root{
-        --primary-color: rgb(30, 212, 6);
-        --text-color: white;
-        --second-color: rgb(160, 255, 160);
+
+    /* Green Theme (Active Theme) */
+    :root {
+      --primary-color: rgb(30, 212, 6);
+      --text-color: white;
+      --second-color: rgb(160, 255, 160);
     }
-    body{
-        background-color: var(--second-color);
+
+    /* ===============================
+       Global Styles
+    =============================== */
+    body {
+      background-color: var(
+        --second-color
+      ); /* Applies secondary color as page background */
     }
-    *{
-        margin: 0;
-        padding: 0;
+
+    * {
+      margin: 0;
+      padding: 0; /* Removes default spacing */
     }
-    ul li{
-        list-style: none;
-        display: inline;
-        padding: 23px;
-        font-weight: bolder;
+
+    /* ===============================
+       Navigation Bar Styling
+    =============================== */
+    ul li {
+      list-style: none; /* Removes bullet points */
+      display: inline; /* Aligns list items horizontally */
+      padding: 23px;
+      font-weight: bolder; /* Makes text bold */
     }
-    nav{
-        background-color: var(--primary-color);
+
+    nav {
+      background-color: var(
+        --primary-color
+      ); /* Uses variable for main theme color */
     }
-    ul li a{
-        color: var(--text-color);
-        text-decoration: none;
+
+    ul li a {
+      color: var(--text-color); /* Uses variable for text color */
+      text-decoration: none; /* Removes underline from links */
     }
-</style>
-<body>
+  </style>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="">Name</a></li>
-                <li><a href="">Address</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Pin Code</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <!-- Navigation links -->
+          <li><a href="">Name</a></li>
+          <li><a href="">Address</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Pin Code</a></li>
+        </ul>
+      </nav>
     </header>
-    
-</body>
+  </body>
 </html>

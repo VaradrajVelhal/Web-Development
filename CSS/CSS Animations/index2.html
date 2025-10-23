@@ -1,48 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ball Animation</title>
-</head>
-<style>
-    .container{
-        position: relative;
-        height: 80vh;
-        width: 80vw;
-        background-color: royalblue;
-    }
-    .ball{
-        height: 100px;
-        width: 100px;
-        background-color:red;
-        border-radius: 70px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        animation: animateX 3s linear infinite, animateY 1s ease-out infinite alternate;
+  </head>
 
+  <style>
+    /* 
+   The container acts as the boundary for the ball.
+   position: relative ensures that absolutely positioned 
+   child elements (like .ball) are positioned relative to it.
+*/
+    .container {
+      position: relative; /* sets positioning context for .ball */
+      height: 80vh; /* 80% of viewport height */
+      width: 80vw; /* 80% of viewport width */
+      background-color: royalblue; /* background of the animation area */
     }
+
+    /* 
+   The ball element that will move inside the container.
+   Using position: absolute lets it move freely inside the relative parent.
+*/
+    .ball {
+      height: 100px;
+      width: 100px;
+      background-color: red;
+      border-radius: 70px; /* makes the ball circular */
+      position: absolute; /* allows movement within the container */
+      bottom: 0; /* starts from the bottom of the container */
+      left: 0; /* starts from the left side */
+
+      /* 
+       Applying two animations simultaneously:
+       1. animateX - Moves the ball horizontally (left to right)
+       2. animateY - Moves the ball vertically (up and down)
+    */
+      animation: animateX 3s linear infinite,
+        /* horizontal motion, constant speed */ animateY 1s ease-out infinite
+          alternate; /* vertical motion (bounce effect) */
+    }
+
+    /* 
+   Horizontal animation (moves the ball from left → right)
+   'left' property changes from 0 to 100%.
+   100% here means the right edge of the container.
+*/
     @keyframes animateX {
-        from{
-            left: 0;
-        }
-        to{
-            left: 100%;
-        }
+      from {
+        left: 0; /* starting at left edge */
+      }
+      to {
+        left: 100%; /* moves to the far right */
+      }
     }
+
+    /* 
+   Vertical animation (moves the ball up and down)
+   'bottom' changes from 0 → 100%.
+   The 'alternate' direction in animation makes it go up & down repeatedly.
+*/
     @keyframes animateY {
-        from{
-            bottom: 0;
-        }
-        to{
-            bottom: 100%;
-        }
+      from {
+        bottom: 0; /* start from bottom */
+      }
+      to {
+        bottom: 100%; /* move to top */
+      }
     }
-</style>
-<body>
+  </style>
+
+  <body>
+    <!-- 
+        The container is the blue area where the red ball moves.
+        The ball moves diagonally, simulating a bouncing effect 
+        due to the two keyframes working together.
+    -->
     <div class="container">
-        <div class="ball"></div>
+      <div class="ball"></div>
     </div>
-</body>
+  </body>
 </html>

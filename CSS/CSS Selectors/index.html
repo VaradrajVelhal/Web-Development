@@ -1,59 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Selectors</title>
-    <style>
-        /* Element Selector */
-        div{
-            background-color: rebeccapurple;
-        }
-        .red{
-            /* Class Selector */
-            background-color: chocolate;
-        }
-        #gray{
-            /* Id Selector */
-            background-color: gray;
-        }
-        div > p{
-            /* Child Selector */
-            color: blue;
-            background-color: maroon;
-        }
-        div p{
-            /* Discendant Selector */
-            background-color: cornflowerblue;
-            color: bisque;
-        }
-        *{
-            /* Universal Selector */
-            margin: 0;
-            padding: 0;
-        }
-        /* Pseudo Selector */
-        a:visited{
-            color: magenta;
-        }
-        a:active{
-            background-color: aqua;
-        }
-        a:hover{
-            background-color: black;
-        }
 
+    <style>
+      /* 
+           ELEMENT SELECTOR
+           Targets all <div> elements on the page.
+           Applies same styles to every <div>.
+        */
+      div {
+        background-color: rebeccapurple;
+      }
+
+      /* 
+           CLASS SELECTOR (.)
+           Targets all elements with class="red".
+           Class selectors are reusable.
+        */
+      .red {
+        background-color: chocolate;
+      }
+
+      /* 
+           ID SELECTOR (#)
+           Targets a single unique element with id="gray".
+           IDs should be unique per page.
+        */
+      #gray {
+        background-color: gray;
+      }
+
+      /* 
+           CHILD SELECTOR (parent > child)
+           Targets only <p> elements that are *direct children* of a <div>.
+           Example: <div><p>...</p></div> ✅
+           Nested deeper (inside another tag) ❌
+        */
+      div > p {
+        color: blue;
+        background-color: maroon;
+      }
+
+      /* 
+           DESCENDANT SELECTOR (ancestor descendant)
+           Targets all <p> elements that are *inside* a <div* at any level.
+           Example: <div><article><p>...</p></article></div> ✅
+        */
+      div p {
+        background-color: cornflowerblue;
+        color: bisque;
+      }
+
+      /* 
+           UNIVERSAL SELECTOR (*)
+           Targets ALL elements on the page.
+           Commonly used to reset default margins and paddings.
+        */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* 
+           PSEUDO-CLASS SELECTORS (for <a> links)
+           Used to style elements based on their state.
+        */
+
+      a:visited {
+        color: magenta; /* After visiting the link */
+      }
+
+      a:active {
+        background-color: aqua; /* While the link is being clicked */
+      }
+
+      a:hover {
+        background-color: black; /* When mouse hovers over link */
+      }
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
+    <!-- Basic <div> element styled by element selector -->
     <div>I am a Div</div>
+
+    <!-- Class selector (.red) + Child selector (div > p) -->
     <div class="red">
-        <p>I am a paragraph inside Div</p>
-        I am a Div number 2</div>
+      <p>I am a paragraph inside Div</p>
+      I am a Div number 2
+    </div>
+
+    <!-- ID selector (#gray) + Descendant selector (div p) -->
     <div id="gray">
-        <article>
-            <p>I am paragraph inside article tag so i will need "Descendant Selector"</p>
-        </article> I am a Div number 3</div>
-        <a href="https://google.com">Visit Google</a>
-</body>
+      <article>
+        <p>
+          I am paragraph inside article tag so I will need "Descendant Selector"
+        </p>
+      </article>
+      I am a Div number 3
+    </div>
+
+    <!-- Pseudo selectors (hover, active, visited) apply here -->
+    <a href="https://google.com">Visit Google</a>
+  </body>
 </html>

@@ -1,31 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Overflow Property</title>
-</head>
-<style>
-.box{
-    width: 20vw;
-    height: 30vh;
-    border: 2px solid blueviolet;
-    /* overflow: auto;
-    overflow-x: hidden;
-    overflow-y: scroll; */
-    overflow: hidden auto;
-    /* white-space: nowrap; */
-}
-</style>
+  </head>
 
-<body>
+  <style>
+    .box {
+      width: 20vw; /* width = 20% of viewport width */
+      height: 30vh; /* height = 30% of viewport height */
+      border: 2px solid blueviolet;
+
+      /* 
+           The overflow property controls what happens 
+           when the content is larger than the container.
+        */
+
+      /* 
+           Common values:
+           - visible → (default) content spills out of the box
+           - hidden → extra content is clipped (not visible, no scrollbar)
+           - scroll → always shows scrollbar (even if not needed)
+           - auto → adds scrollbar only when content overflows
+        */
+
+      /* overflow: auto; */ /* Scrollbars appear only if needed */
+      /* overflow-x: hidden; */ /* Hides horizontal overflow only */
+      /* overflow-y: scroll; */ /* Adds vertical scrollbar always */
+
+      /* 
+           Shorthand syntax → overflow-x overflow-y 
+           e.g. overflow: hidden auto;
+           → hides horizontal overflow, allows vertical scrolling.
+        */
+      overflow: hidden auto;
+
+      /* 
+           white-space: nowrap;
+           → prevents text from wrapping to the next line (forces horizontal overflow)
+           (Uncomment to test horizontal scrolling behavior)
+        */
+      /* white-space: nowrap; */
+    }
+  </style>
+
+  <body>
+    <!-- 
+         The .box container is intentionally small.
+         The long text inside will overflow vertically,
+         activating vertical scroll (because of overflow: hidden auto).
+    -->
     <div class="box">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis non libero suscipit provident accusantium
-        accusamus quo sit eius. Tempore obcaecati saepe molestias expedita iure rem distinctio repellendus quia ipsa
-        temporibus, consequatur nobis modi exercitationem voluptas dolorum dignissimos ad, illum corporis laboriosam
-        aliquid reiciendis placeat nisi fugiat.
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis non
+      libero suscipit provident accusantium accusamus quo sit eius. Tempore
+      obcaecati saepe molestias expedita iure rem distinctio repellendus quia
+      ipsa temporibus, consequatur nobis modi exercitationem voluptas dolorum
+      dignissimos ad, illum corporis laboriosam aliquid reiciendis placeat nisi
+      fugiat.
     </div>
-</body>
-
+  </body>
 </html>

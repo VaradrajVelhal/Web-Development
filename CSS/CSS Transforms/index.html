@@ -1,35 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    *{
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transform Example</title>
+
+    <style>
+      /* 
+           Reset default browser styles 
+           (Removes unwanted margin/padding around elements)
+        */
+      * {
         margin: 0;
         padding: 0;
-    }
-    .box{
+      }
+
+      /* 
+           .container - outer box to hold the rotating element 
+           vw (viewport width) and vh (viewport height) make it responsive
+        */
+      .container {
+        width: 100vw; /* 100% of the viewport width */
+        height: 80vh; /* 80% of the viewport height */
+        border: 2px solid palevioletred;
+        display: flex; /* Centers child element */
+        justify-content: center; /* Horizontally center */
+        align-items: center; /* Vertically center */
+      }
+
+      /* 
+           .box - element to demonstrate CSS transform
+           The transform property can:
+           - rotate
+           - scale
+           - skew
+           - translate
+           or combine multiple transformations together.
+        */
+      .box {
         height: 50px;
         width: 50px;
         background-color: bisque;
         border: 2px solid black;
-        transform: rotate(40deg);
-        /* transform rotats elements  */
-    }
-    .container{
-        width: 100vw;
-        height: 80vh;
-        border: 2px solid palevioletred;
-    }
-    
-</style>
-<body>
-    <div class="container">
-        <div class="box">
 
-        </div>
+        /* 
+               transform: rotate(40deg);
+               → Rotates the element 40 degrees clockwise
+               Other common examples:
+               - transform: scale(1.5);     (increases size 1.5x)
+               - transform: translateX(50px); (moves right by 50px)
+               - transform: skew(20deg);    (tilts the element)
+               You can also combine them:
+               transform: translate(50px, 20px) rotate(45deg);
+            */
+        transform: rotate(40deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box"></div>
     </div>
-</body>
+  </body>
 </html>

@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>^Transition Property</title>
-</head>
-<style>
-.container{
-    background-color: aqua;
-    width: 50vw;
-    height: 40vh;
-}
-.box{
-    background-color: blanchedalmond;
-    width: 10vw;
-    height: 8vh;
-    /* transition-property: transform;
-    transition-duration: 1.5s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 1s; There is short hand - >*/
-    transition: transform 1.5s ease-in-out 1s;
-    /* to see this working inspect the page and click on div and remove transform */
-}
-.translate{
-    transform: translateX(10vw) translateY(10vh);
-}
-</style>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition Property</title>
+  </head>
+  <style>
+    /* The container just provides space and background */
+    .container {
+      background-color: aqua;
+      width: 50vw; /* 50% of the viewport width */
+      height: 40vh; /* 40% of the viewport height */
+    }
+
+    /* The box element to demonstrate transition */
+    .box {
+      background-color: blanchedalmond;
+      width: 10vw;
+      height: 8vh;
+
+      /* 
+           Transition lets CSS property changes happen smoothly over time.
+           Individual properties:
+           transition-property: transform;
+           transition-duration: 1.5s;
+           transition-timing-function: ease-in-out;
+           transition-delay: 1s;
+
+           You can combine them using shorthand:
+           transition: property duration timing-function delay;
+        */
+      transition: transform 1.5s ease-in-out 1s;
+
+      /* 
+           NOTE:
+           To test this in browser:
+           - Inspect the element (F12)
+           - Toggle the "transform" property manually
+           - You’ll see the smooth transition occur
+        */
+    }
+
+    /* This class applies the transformation to move the box */
+    .translate {
+      /* Moves the box 10vw right and 10vh down */
+      transform: translateX(10vw) translateY(10vh);
+    }
+  </style>
+  <body>
     <div class="container">
-        <div class="box translate"></div>
+      <!-- The "translate" class applies the transformation -->
+      <div class="box translate"></div>
     </div>
-</body>
+  </body>
 </html>

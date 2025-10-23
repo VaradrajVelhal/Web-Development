@@ -1,28 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <style>
-        h1{
+
+    <!-- ==============================
+         2️⃣ INTERNAL CSS
+         ==============================
+         - Defined inside a <style> tag within the <head> section.
+         - Affects only this HTML file.
+         - Good for small projects or single-page styles.
+    -->
+    <!-- 
+    <style>
+        h1 {
             background-color: red;
             color: yellow;
         }
-    </style> -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- <h1 style="color: aqua;background-color: blueviolet;"> -->
-        <h1>Three ways to add CSS to HTML</h1>
-        <div>
-            <ol>
-                <li>Inline CSS</li>
-                <li>Internal CSS</li>
-                <li>External CSS</li>
-            </ol>
-        </div>
+    </style> 
+    -->
+
+    <!-- ==============================
+         3️⃣ EXTERNAL CSS
+         ==============================
+         - Best and most common approach.
+         - CSS is written in a separate file (e.g., style.css).
+         - Keeps HTML clean and reusable across multiple pages.
+         - Linked using the <link> tag as shown below.
+    -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ==============================
+         1️⃣ INLINE CSS
+         ==============================
+         - Written directly inside the HTML tag using the “style” attribute.
+         - Applies styles only to that specific element.
+         - Not recommended for large projects because it mixes style and content.
+    -->
+    <!-- <h1 style="color: aqua; background-color: blueviolet;"> -->
+
+    <!-- Heading demonstrating all three CSS methods -->
+    <h1>Three ways to add CSS to HTML</h1>
+
+    <!-- Ordered list showing the three approaches -->
+    <div>
+      <ol>
+        <li>Inline CSS</li>
+        <li>Internal CSS</li>
+        <li>External CSS</li>
+      </ol>
+    </div>
+
+    <!-- Sample content -->
     <div>Name - Varadraj</div>
     <p>College Name - PCCOE</p>
-</body>
+  </body>
 </html>

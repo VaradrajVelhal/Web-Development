@@ -1,57 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Position Property</title>
-</head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
+  </head>
+  <style>
+    /* Reset default spacing */
+    * {
+      margin: 0;
+      padding: 0;
     }
-    .box{
-        border: 2px solid black;
-        height: 400px;
-        width: 80vw;
-        padding: 3px;
-        margin: 3px;
+
+    /* Base box styling */
+    .box {
+      border: 2px solid black;
+      height: 400px;
+      width: 80vw;
+      padding: 3px;
+      margin: 3px;
     }
-    .box1{
-        background-color: blue;
-        height: 20px;
-        top: 0;
-        width: 100%;
-        position: sticky;
-        margin: 0;
-        padding: 0;
+
+    /* Sticky Position Example:
+       - Sticks to the top when scrolling.
+       - Requires a scrollable container. */
+    .box1 {
+      background-color: blue;
+      height: 20px;
+      top: 0;
+      width: 100%;
+      position: sticky; /* Stays visible at top */
+      margin: 0;
+      padding: 0;
     }
-    .box2{
-        background-color: antiquewhite;
+
+    /* Normal static position (default) */
+    .box2 {
+      background-color: antiquewhite;
     }
-    .box3{
-        background-color: aqua;
-        /* position: relative; */
+
+    /* Relative position example (commented out)
+       - Moves element *relative* to its normal position.
+       - Allows child elements with absolute positioning to be placed relative to this. */
+    .box3 {
+      background-color: aqua;
+      /* position: relative; */
     }
-    .box4{
-        background-color: black;
-        /* position: fixed;
+
+    /* Fixed position example (commented out)
+       - Stays fixed at a defined position on the screen
+         even when scrolling.
+       - Used for headers, footers, or floating buttons. */
+    .box4 {
+      background-color: black;
+      /* position: fixed;
         bottom: 0px;
         left: 8vw;
         height: 111px; */
     }
-    .parent{
-        padding: 40px;
-        margin: 30;
-        border: 2px solid red;
+
+    /* Parent container for all boxes */
+    .parent {
+      padding: 40px;
+      margin: 30;
+      border: 2px solid red;
     }
-</style>
-<body>
+  </style>
+
+  <body>
     <div class="parent">
-        <div class="box box1"></div>
-        <div class="box box2"></div>
-        <div class="box box3"></div>
-        <div class="box box4"></div>
+      <!-- Sticky bar at the top -->
+      <div class="box box1"></div>
+
+      <!-- Static positioned box -->
+      <div class="box box2"></div>
+
+      <!-- Relative positioned box (optional) -->
+      <div class="box box3"></div>
+
+      <!-- Fixed positioned box (optional) -->
+      <div class="box box4"></div>
     </div>
-</body>
+  </body>
 </html>

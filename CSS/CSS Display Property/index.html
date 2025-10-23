@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Display Property</title>
-</head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
+  </head>
+
+  <style>
+    /* 
+       Resetting default browser styles for consistent layout.
+       Removes unwanted margins and paddings from all elements.
+    */
+    * {
+      margin: 0;
+      padding: 0;
     }
-    .box{
-        border: 2px solid blue;
-        display: inline-block;
-        width: 344px;
-        padding: 45px;
-        margin: 34px;
+
+    /* 
+       Common styling for all .box elements.
+       - border: makes box boundaries visible
+       - display: inline-block lets boxes appear in one line 
+         while still respecting width, height, margin, and padding.
+    */
+    .box {
+      border: 2px solid blue;
+      display: inline-block; /* inline + block combination */
+      width: 344px;
+      padding: 45px;
+      margin: 34px;
     }
-    .box1{
-        /* display: none; */
-        /* visibility: hidden; */
+
+    /* 
+       .box1 is used to test different display behaviors.
+       Uncomment one at a time to observe effects:
+       
+       display: none;       → completely removes the element from the page layout.
+       visibility: hidden;  → hides the element but keeps its space reserved.
+    */
+    .box1 {
+      /* display: none; */ /* hides element and removes it from layout */
+      /* visibility: hidden; */ /* hides element but keeps layout space */
     }
-</style>
-<body>
-    <div class="box box1">
-        I am a box.
-    </div>
-    <div class="box">
-        Also a Nice Box
-    </div>
+  </style>
+
+  <body>
+    <!-- 
+         Two divs styled as boxes.
+         The first one can be hidden by changing display or visibility in CSS.
+    -->
+    <div class="box box1">I am a box.</div>
+
+    <div class="box">Also a Nice Box</div>
+
+    <!-- 
+         Inline elements (spans) appear side by side naturally.
+         Unlike divs, they don’t start on a new line.
+    -->
     <span>I am a good </span>
     <span>Box</span>
-</body>
+  </body>
 </html>

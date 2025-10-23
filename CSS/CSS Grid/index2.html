@@ -1,46 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    .box{
-        border: 2px solid rgb(11, 11, 0);
-        display: grid;
-        grid-template-areas: "nav nav nav"
-                             "side article article";
-    }
-    .item{
-        border: 2px solid red;
-        height: 50px;
-    }
-    .item1{
-        grid-area: nav;
-        background-color: aqua;
-    }
-    .item2{
-        grid-area: side;
-        background-color: bisque;
-    }
-    .item3{
-        grid-area: article;
-        background-color: aquamarine;
-    }
-    .item4{
-        grid-area: nav;
-        background-color: rgb(255, 187, 85);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Template Areas Example</title>
+  </head>
+
+  <style>
+    /* 
+       The .box is the grid container.
+       We're using grid-template-areas to define named regions on the grid.
+    */
+    .box {
+      border: 2px solid rgb(11, 11, 0);
+      display: grid;
+
+      /* 
+           grid-template-areas defines the layout visually.
+           Each quoted line represents a row.
+           Repeated names mean that area spans multiple columns.
+           Example:
+           "nav nav nav"   → nav takes all 3 columns in first row
+           "side article article" → side = 1st col, article = 2nd & 3rd col
+        */
+      grid-template-areas:
+        "nav nav nav"
+        "side article article";
     }
 
-</style>
-<body>
+    /* General styling for all grid items */
+    .item {
+      border: 2px solid red;
+      height: 50px;
+    }
+
+    /* 
+       Each grid-area name below corresponds to a name used in grid-template-areas.
+       grid-area property assigns the element to that named region.
+    */
+    .item1 {
+      grid-area: nav; /* Fills the area labeled 'nav' */
+      background-color: aqua;
+    }
+
+    .item2 {
+      grid-area: side; /* Fills the area labeled 'side' */
+      background-color: bisque;
+    }
+
+    .item3 {
+      grid-area: article; /* Fills the area labeled 'article' */
+      background-color: aquamarine;
+    }
+
+    /* 
+       item4 also tries to use grid-area: nav.
+       Multiple items cannot occupy the same named area.
+       Only the *last* one (in DOM order) will be visible in that spot.
+       This demonstrates overlapping items.
+    */
+    .item4 {
+      grid-area: nav;
+      background-color: rgb(255, 187, 85);
+    }
+
+    /* item5 has no grid-area defined → placed automatically in next available cell */
+  </style>
+
+  <body>
     <div class="box">
-        <div class="item item1">1</div>
-        <div class="item item2">2</div>
-        <div class="item item3">3</div>
-        <div class="item item4">4</div>
-        <div class="item item5">5</div>
+      <div class="item item1">1</div>
+      <!-- Header / Nav Area -->
+      <div class="item item2">2</div>
+      <!-- Sidebar -->
+      <div class="item item3">3</div>
+      <!-- Article -->
+      <div class="item item4">4</div>
+      <!-- Overlaps nav area -->
+      <div class="item item5">5</div>
+      <!-- Auto-placed -->
     </div>
-</body>
+  </body>
 </html>

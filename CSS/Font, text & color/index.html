@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fonts</title>
     <style>
-        h1{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        p{
-            font-family: Arial, Helvetica, sans-serif;
-            /* font-style:oblique; */
-            /* font-weight: bolder; */
-            text-decoration: dotted;
-            font-size: 20px;
-            line-height: 1.2;
-        }
-        h2{
-            /* text-transform makes words first letter capital */
-            text-transform: capitalize;
-            text-decoration: underline;
-            text-decoration-color: aqua;
-            text-decoration-style: wavy;
-            text-decoration-thickness:5px;
-            text-align: center;
-        }
+      /* ===============================
+           Font and Text Styling Examples
+        =============================== */
+
+      h1 {
+        /* Font family: Specifies the typeface to use for <h1> */
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      p {
+        /* Font family for paragraph text */
+        font-family: Arial, Helvetica, sans-serif;
+
+        /* Uncomment below lines to experiment with different text styles */
+        /* font-style: oblique; */ /* Makes text slightly slanted */
+        /* font-weight: bolder; */ /* Increases text thickness */
+
+        /* Adds decoration to text (e.g., underline, overline, line-through, dotted, dashed) */
+        text-decoration: dotted; /* ⚠️ Note: 'dotted' is not a valid standalone value for text-decoration — 
+                                        should use 'text-decoration-style' instead */
+
+        font-size: 20px; /* Controls text size */
+        line-height: 1.2; /* Controls spacing between lines */
+      }
+
+      h2 {
+        /* Capitalizes the first letter of each word */
+        text-transform: capitalize;
+
+        /* Adds underline decoration with custom style */
+        text-decoration: underline;
+        text-decoration-color: aqua; /* Changes underline color */
+        text-decoration-style: wavy; /* Makes underline wavy */
+        text-decoration-thickness: 5px; /* Controls underline thickness */
+
+        /* Centers the heading text */
+        text-align: center;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div>
-        <h1>Fonts</h1>
-        <h2>about fonts</h2>
-        <p>This is about Fonts. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus cupiditate blanditiis fuga. Asperiores id beatae, quam quod harum illo distinctio voluptas? Consequuntur molestias perspiciatis molestiae rerum neque assumenda, eius aut.</p>
+      <h1>Fonts</h1>
+      <h2>about fonts</h2>
+      <p>
+        This is about Fonts. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Natus cupiditate blanditiis fuga. Asperiores id beatae, quam quod
+        harum illo distinctio voluptas? Consequuntur molestias perspiciatis
+        molestiae rerum neque assumenda, eius aut.
+      </p>
     </div>
-</body>
+  </body>
 </html>

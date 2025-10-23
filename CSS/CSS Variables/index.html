@@ -1,50 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Variables</title>
-</head>
-<style>
-    :root{
-        /* variables */
-        --color: red;
-        --seccolor: rgb(254, 72, 72);
-    }
-    *{
+
+    <style>
+      /* 
+           :root selector defines global CSS variables.
+           Variables declared here can be accessed anywhere in the document.
+           Syntax: --variable-name: value;
+        */
+      :root {
+        --color: red; /* Primary color variable */
+        --seccolor: rgb(254, 72, 72); /* Secondary color variable */
+      }
+
+      /* Reset default spacing */
+      * {
         margin: 0;
         padding: 0;
-    }
-    ul{
+      }
+
+      /* 
+           Styling the navigation bar 
+           'display: flex' makes <li> items align horizontally
+        */
+      ul {
         display: flex;
-    }
-    ul li{
-        list-style: none;
+      }
+
+      ul li {
+        list-style: none; /* Removes bullet points */
         padding: 10px;
         margin: 20px;
-    }
-    .nav{
-        background-color: var(--color);
-    }
-    .container{
-        background-color: var(--seccolor);
-    }
-</style>
+      }
 
-<body>
+      /* 
+           Use of CSS variables with var() function
+           Syntax: var(--variable-name)
+        */
+      .nav {
+        background-color: var(--color); /* Applies primary color */
+      }
+
+      .container {
+        background-color: var(--seccolor); /* Applies secondary color */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
     <div class="nav">
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
     </div>
-    <div class="container">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam, eveniet iusto nemo quia ducimus, quas
-        cumque enim illo corporis mollitia, cum eligendi laborum officiis quasi quaerat odit facere animi nostrum. Iste,
-        dolores quas nostrum veniam quo possimus totam temporibus suscipit, culpa architecto omnis tempora quaerat.
-    </div>
-</body>
 
+    <!-- Content container -->
+    <div class="container">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam,
+      eveniet iusto nemo quia ducimus, quas cumque enim illo corporis mollitia,
+      cum eligendi laborum officiis quasi quaerat odit facere animi nostrum.
+      Iste, dolores quas nostrum veniam quo possimus totam temporibus suscipit,
+      culpa architecto omnis tempora quaerat.
+    </div>
+  </body>
 </html>

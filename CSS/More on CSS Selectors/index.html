@@ -1,41 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>More on CSS Selectors</title>
-</head>
-<style>
+  </head>
+  <style>
+    /* ============================================
+       Example of :first-child (commented out)
+       - Targets the first element inside its parent.
+       ============================================ */
     /* .box:first-child{
         background-color: red;
     } */
-    .boxes::before{
-        content: "This will be displayed before boxes";
-        color: green;
+
+    /* ============================================
+       ::before → Pseudo-element
+       - Inserts content *before* the actual element’s content.
+       - Commonly used for decoration or labels.
+       ============================================ */
+    .boxes::before {
+      content: "This will be displayed before boxes";
+      color: green;
     }
-    /* This before and after are called Pseudo Elements */
-    .boxes::after{
-        content: "This will be displayed after boxes";
-        color: red;
+
+    /* ============================================
+       ::after → Pseudo-element
+       - Inserts content *after* the actual element’s content.
+       - Useful for adding symbols, extra text, or styling.
+       ============================================ */
+    .boxes::after {
+      content: "This will be displayed after boxes";
+      color: red;
     }
-    ::selection{
-        color: rgb(255, 153, 0);
-        background-color: black;
+
+    /* ============================================
+       ::selection → Pseudo-element
+       - Changes color & background of selected text.
+       ============================================ */
+    ::selection {
+      color: rgb(255, 153, 0);
+      background-color: black;
     }
-    .box::first-letter{
-        color: aqua;
-        font-size: 20px;
+
+    /* ============================================
+       ::first-letter → Pseudo-element
+       - Styles only the first letter of an element.
+       - Often used in articles or decorative headings.
+       ============================================ */
+    .box::first-letter {
+      color: aqua;
+      font-size: 20px;
     }
-    input::placeholder{
-        color: rgb(190, 122, 253);
+
+    /* ============================================
+       ::placeholder → Pseudo-element
+       - Styles placeholder text inside input fields.
+       ============================================ */
+    input::placeholder {
+      color: rgb(190, 122, 253);
     }
-</style>
-<body>
+  </style>
+
+  <body>
     <div class="boxes">
-        <div class="box">1st Box</div>
-        <div class="box">2nd Box</div>
-        <div class="box">3rd Box</div>
-        <input type="text" placeholder="Type Your Name Here">
+      <div class="box">1st Box</div>
+      <div class="box">2nd Box</div>
+      <div class="box">3rd Box</div>
+
+      <!-- Input element with styled placeholder -->
+      <input type="text" placeholder="Type Your Name Here" />
     </div>
-</body>
+  </body>
 </html>

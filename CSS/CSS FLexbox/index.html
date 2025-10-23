@@ -1,93 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Flexbox</title>
-</head>
-<style>
-    .container{
-        /* display: flex; means that you can now use properties of Flexbox */
-        border: 2px solid palevioletred;
-        display: flex;
-        height: 80vh;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        /* gap: 10px; */
+  </head>
+
+  <style>
+    /* 
+       The container uses Flexbox to align and distribute its child items.
+       Flexbox helps create responsive, flexible layouts without float or positioning.
+    */
+    .container {
+      border: 2px solid palevioletred; /* border for visualization */
+
+      /* 
+           display: flex enables flexbox layout for this container. 
+           Once applied, all direct children become "flex items".
+        */
+      display: flex;
+
+      height: 80vh; /* height is 80% of viewport height */
+
+      /* 
+           justify-content: defines alignment along the main axis (horizontal by default)
+           - center → centers items horizontally within container
+        */
+      justify-content: center;
+
+      /* 
+           align-items: defines alignment along the cross axis (vertical)
+           - center → centers items vertically
+        */
+      align-items: center;
+
+      /* 
+           flex-wrap: allows items to move to a new line if they overflow
+           - wrap → items wrap to the next line as needed
+           - nowrap (default) → keeps all items in one line
+        */
+      flex-wrap: wrap;
+
+      /* gap: 10px; optional → adds space between flex items (modern alternative to margin) */
     }
-    .item{
-        height: 92px;
-        width: 92px;
-        border: 2px solid black;
-        margin: 4px;
-        background-color: violet;
+
+    /* 
+       Each .item is a child of .container and automatically becomes a flex item.
+       You can style them individually or collectively.
+    */
+    .item {
+      height: 92px;
+      width: 92px;
+      border: 2px solid black;
+      margin: 4px; /* adds spacing between boxes */
+      background-color: violet; /* visible color for each box */
     }
-</style>
-<body>
+  </style>
+
+  <body>
     <main>
-        <div class="container">
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-        </div>
+      <!-- 
+            Flex container with multiple child items.
+            All .item divs will align and wrap automatically 
+            based on available space in the container.
+        -->
+      <div class="container">
+        <!-- Multiple flex items -->
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
     </main>
-</body>
+  </body>
 </html>

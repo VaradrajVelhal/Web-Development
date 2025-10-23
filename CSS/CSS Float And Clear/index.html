@@ -1,35 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Float & Clear</title>
-</head>
-<style>
-    .cards{
-        border: 2px solid black;
-        display: flow-root;
-    }
-    img{
-        /* Float will allow content to float right side of image.
-        Used in old times*/
-        float:left;
-    }
-    .card{
-        border: 2px solid red;
-    }
-</style>
-<body>
-    <div class="cards">
-        <img src="nature.jpg" alt="" width="230">
-        <div class="card">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis a repellendus, placeat esse ad, vel in vero
-            possimus repudiandae eum omnis, dolor adipisci quasi eos molestiae assumenda reiciendis aperiam eaque!
-        </div>
-        <div class="card">card2</div>
-        <div class="card">card3</diva>
-        </div>
-</body>
+  </head>
 
+  <style>
+    /* 
+       The .cards container holds the image and text cards.
+       display: flow-root is a modern trick to clear floated elements automatically.
+       It creates a new block formatting context, preventing content from collapsing.
+    */
+    .cards {
+      border: 2px solid black;
+      display: flow-root; /* ensures floated elements don’t overflow the parent */
+    }
+
+    /* 
+       Float property moves the element to one side (left/right)
+       allowing inline content (like text) to wrap around it.
+       Historically used for text wrapping before Flexbox & Grid.
+    */
+    img {
+      float: left; /* moves image to the left, text wraps around it */
+      margin-right: 10px; /* optional spacing between image and text */
+    }
+
+    /* 
+       Each .card represents a text block or section inside .cards.
+       The red border helps visualize how text flows beside the floated image.
+    */
+    .card {
+      border: 2px solid red;
+    }
+  </style>
+
+  <body>
+    <!-- 
+         .cards container includes a floated image and multiple card divs.
+         The first card’s text wraps around the image due to float.
+         The flow-root display ensures the parent div expands to contain floated elements.
+    -->
+    <div class="cards">
+      <img src="nature.jpg" alt="nature image" width="230" />
+
+      <div class="card">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis a
+        repellendus, placeat esse ad, vel in vero possimus repudiandae eum
+        omnis, dolor adipisci quasi eos molestiae assumenda reiciendis aperiam
+        eaque!
+      </div>
+
+      <div class="card">card2</div>
+      <div class="card">card3</div>
+    </div>
+  </body>
 </html>

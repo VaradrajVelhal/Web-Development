@@ -1,28 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Shadow & Text Shadow</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
+  <style>
+    /* 
+       .box class styles a container with a shadow effect.
+       BOX-SHADOW syntax: box-shadow: offset-x offset-y blur-radius color;
+       You can also add a spread-radius or 'inset' keyword for inner shadows.
+    */
     .box {
-        border: 2px solid black;
-        padding: 34px;
-        box-shadow: 5px 15px 5px #bf3a3a;
-    }
-    .text-element{
-        text-shadow: 2px 2px 4px #ff0000;
-    }
-</style>
+      border: 2px solid black;
+      padding: 34px;
 
-<body>
-    <div class="box">
-        I am a box
-    </div>
-    <p class="text-element">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic quo cum dicta soluta
-        voluptate rerum temporibus atque dolore ipsum!</p>
-</body>
+      /* Adds shadow to the box — gives 3D depth effect */
+      box-shadow: 5px 15px 5px #bf3a3a;
+      /* 
+           5px → horizontal offset (right)
+           15px → vertical offset (down)
+           5px → blur radius
+           #bf3a3a → shadow color
+        */
+    }
 
+    /* 
+       .text-element class applies shadow to text.
+       TEXT-SHADOW syntax: text-shadow: offset-x offset-y blur-radius color;
+       Used to make text more visually appealing or readable.
+    */
+    .text-element {
+      text-shadow: 2px 2px 4px #ff0000;
+      /* 
+           2px → horizontal offset
+           2px → vertical offset
+           4px → blur radius
+           #ff0000 → shadow color (red)
+        */
+    }
+  </style>
+
+  <body>
+    <!-- Box with border and outer shadow -->
+    <div class="box">I am a box</div>
+
+    <!-- Paragraph with glowing red text shadow -->
+    <p class="text-element">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum hic quo cum
+      dicta soluta voluptate rerum temporibus atque dolore ipsum!
+    </p>
+  </body>
 </html>
