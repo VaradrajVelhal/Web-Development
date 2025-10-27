@@ -1,0 +1,4 @@
+#secret keys
+.env
+#other common files
+node_modules/

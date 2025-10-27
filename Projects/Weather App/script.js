@@ -1,7 +1,9 @@
+require("dotenv").config();
+
 const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
 const card = document.querySelector(".card");
-const apiKey = "e0c901433868c4c3e5c69a7a437ac1a2";
+const apiKey = process.env.API_KEY;
 weatherForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const city = cityInput.value.trim();
