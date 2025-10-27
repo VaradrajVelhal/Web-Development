@@ -3,14 +3,18 @@
   padding: 0;
 }
 #pokemonName {
-  width: 200px;
+  width: 250px;
   font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: hsl(0, 0%, 80%);
 }
 .main {
   margin: 50px;
   display: flex;
   justify-content: center;
   align-content: center;
+  gap: 20px;
 }
 #btn {
   height: 25px;
