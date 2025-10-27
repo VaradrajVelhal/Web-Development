@@ -4,8 +4,8 @@ function appendToDisplay(input) {
   display.value += input;
 }
 
-function clear() {
-  display.value = " ";
+function clearDisplay() {
+  display.value = "";
 }
 
 function calculate() {
